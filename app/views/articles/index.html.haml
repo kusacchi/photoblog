@@ -1,0 +1,17 @@
+.container
+  .row
+    - @articles.each do |article|
+      = link_to article do
+        .col-md-3.margin-top-5per.article-block
+          - if article.image_id.present?
+            = image_tag attachment_url(article, :image), class: "img-responsive padding-top-15 article-list-image"
+          - else
+            = image_tag "dog.png", class: "img-responsive padding-top-15 article-list-image"
+          .padding-bottom-15
+            %p.title
+              = article.title
+            %span
+              = article.created_at.strftime("%Y年%m月%d日")
+
+  .row
+    =link_to "新規投稿", new_article_path, class:"margin-top-5per btn btn-primary"

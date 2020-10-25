@@ -1,0 +1,16 @@
+= form_for article do |f|
+  #cover-image.form-group.padding-top-15.relative
+    -if article.image_id.present?
+      = image_tag attachment_url(article, :image), class: "article-image"
+    -else
+      = image_tag "gray.jpeg", class: "article-image"
+    %i.fas.fa-camera.size
+  = f.attachment_field :image
+  .form-group
+    = f.label :title, "タイトル", class: "padding-top-15"
+    = f.text_field :title, class: "form-control"
+  .form-group
+    = f.label :body, "本文"
+    = f.text_area :body,rows: 10, class: "form-control"
+  .form-group
+    = f.submit "投稿する", class: "btn btn-success"

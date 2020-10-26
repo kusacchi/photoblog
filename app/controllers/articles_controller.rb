@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to root_path, notice: "更新できました。"
     else
-      render edit_article_path, alert: "更新できませんでした。"
+      redirect_to edit_article_path, alert: "更新できませんでした。"
     end
   end
 
@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to root_path, notice: "投稿しました。"
     else
-      render new_article_path, alert: "投稿できませんでした。"
+      redirect_to new_article_path, alert: "投稿できませんでした。"
     end
   end
 

@@ -3,7 +3,7 @@
     - if @article.image_id.present?
       = image_tag attachment_url(@article, :image), class: "article-image padding-top-15"
     - else
-      = image_tag "dog.png", class: "article-image padding-top-15"
+      = image_tag "/images/gray.jpeg", class: "article-image padding-top-15"
     %h1
       = @article.title
     .padding-bottom-15.padding-10

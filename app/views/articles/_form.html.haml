@@ -3,7 +3,7 @@
     -if article.image_id.present?
       = image_tag attachment_url(article, :image), class: "article-image"
     -else
-      = image_tag "gray.jpeg", class: "article-image"
+      = image_tag "/images/gray.jpeg", class: "article-image"
     %i.fas.fa-camera.size
   = f.attachment_field :image
   .form-group

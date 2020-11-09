@@ -1,6 +1,12 @@
 # アプリ名
 ## 「PhotoBlog」
 &emsp;IPアドレス：http://54.250.72.200/
+### テスト用アカウント
+&emsp;名前：テスト
+
+&emsp;Eメールアドレス：test@gmail.com
+
+&emsp;パスワード：test1111
 
 # 開発環境
 ・haml/scss
